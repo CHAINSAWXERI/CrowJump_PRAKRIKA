@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="unity-container"> <!-- class="unity-desktop" -->
+    <div id="unity-container">
       <canvas id="unity-canvas" width=600 height=930 tabindex="-1" style="width: 100%; height: 100%"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -59,11 +59,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/BUILD_10.0.loader.js";
+      var loaderUrl = buildUrl + "/BUILD_12.0.loader.js";
       var config = {
-        dataUrl: buildUrl + "/BUILD_10.0.data",
-        frameworkUrl: buildUrl + "/BUILD_10.0.framework.js",
-        codeUrl: buildUrl + "/BUILD_10.0.wasm",
+        dataUrl: buildUrl + "/BUILD_12.0.data",
+        frameworkUrl: buildUrl + "/BUILD_12.0.framework.js",
+        codeUrl: buildUrl + "/BUILD_12.0.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Telegram_Flappy_Bird",
