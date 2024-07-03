@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="unity-container">
-      <canvas id="unity-canvas" width=600 height=940 tabindex="-1" style="width: 100%; height: 100%"></canvas>
+    <div id="unity-container"> <!-- class="unity-desktop" -->
+      <canvas id="unity-canvas" width=600 height=930 tabindex="-1" style="width: 100%; height: 100%"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -59,11 +59,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/BUILD_9.0.loader.js";
+      var loaderUrl = buildUrl + "/BUILD_10.0.loader.js";
       var config = {
-        dataUrl: buildUrl + "/BUILD_9.0.data",
-        frameworkUrl: buildUrl + "/BUILD_9.0.framework.js",
-        codeUrl: buildUrl + "/BUILD_9.0.wasm",
+        dataUrl: buildUrl + "/BUILD_10.0.data",
+        frameworkUrl: buildUrl + "/BUILD_10.0.framework.js",
+        codeUrl: buildUrl + "/BUILD_10.0.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Telegram_Flappy_Bird",
@@ -97,7 +97,7 @@
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
         // canvas.style.width = "600px";
-        // canvas.style.height = "940px";
+        // canvas.style.height = "930px";
       }
 
       loadingBar.style.display = "block";
@@ -109,7 +109,9 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
-
+                // fullscreenButton.onclick = () => {
+                //   unityInstance.SetFullscreen(1);
+                // };
               }).catch((message) => {
                 alert(message);
               });
